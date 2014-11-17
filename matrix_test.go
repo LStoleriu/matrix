@@ -5,7 +5,7 @@ import "testing"
 func TestSSize(t *testing.T) {
 	R := 100
 	C := 5
-	A := MakeFloat32Matrix(R, C)
+	A := MakeFloat32(R, C)
 	r, c, s := SSize(A)
 	if r != R || c != C || s != C {
 		t.Fail()
@@ -15,7 +15,7 @@ func TestSSize(t *testing.T) {
 func TestSSubmatrix(t *testing.T) {
 	R := 100
 	C := 200
-	A := MakeFloat32Matrix(R, C)
+	A := MakeFloat32(R, C)
 
 	k1, k2 := 17, 13
 	n1, n2 := 6, 19

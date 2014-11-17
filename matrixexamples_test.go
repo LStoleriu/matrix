@@ -4,32 +4,32 @@ import (
 	"fmt"
 )
 
-func ExampleMakeFloat32Matrix() {
-	m := MakeFloat32Matrix(2, 3)
+func ExampleMakeFloat32() {
+	m := MakeFloat32(2, 3)
 	fmt.Println(m)
 
 	//Output:
 	//[[0 0 0] [0 0 0]]
 }
 
-func ExampleMakeFloat64Matrix() {
-	m := MakeFloat64Matrix(2, 3)
+func ExampleMakeFloat64() {
+	m := MakeFloat64(2, 3)
 	fmt.Println(m)
 
 	//Output:
 	//[[0 0 0] [0 0 0]]
 }
 
-func ExampleMakeComplex64Matrix() {
-	m := MakeComplex64Matrix(2, 3)
+func ExampleMakeComplex64() {
+	m := MakeComplex64(2, 3)
 	fmt.Println(m)
 
 	//Output:
 	//[[(0+0i) (0+0i) (0+0i)] [(0+0i) (0+0i) (0+0i)]]
 }
 
-func ExampleMakeComplex128Matrix() {
-	m := MakeComplex128Matrix(2, 3)
+func ExampleMakeComplex128() {
+	m := MakeComplex128(2, 3)
 	fmt.Println(m)
 
 	//Output:
@@ -37,7 +37,7 @@ func ExampleMakeComplex128Matrix() {
 }
 
 func ExampleSSubmatrix() {
-	M := MakeFloat32Matrix(3, 4)
+	M := MakeFloat32(3, 4)
 	for i := range M {
 		for j := range M[i] {
 			M[i][j] = float32(10*i + j)
@@ -56,7 +56,7 @@ func ExampleSSubmatrix() {
 }
 
 func ExampleSSize() {
-	M := MakeFloat32Matrix(3, 4)
+	M := MakeFloat32(3, 4)
 	rows, cols, stride := SSize(M)
 	fmt.Println("Original:  rows=", rows, "cols=", cols, "stride=", stride)
 
@@ -72,7 +72,7 @@ func ExampleSSize() {
 }
 
 func ExampleDSubmatrix() {
-	M := MakeFloat64Matrix(3, 4)
+	M := MakeFloat64(3, 4)
 	for i := range M {
 		for j := range M[i] {
 			M[i][j] = float64(10*i + j)
@@ -91,7 +91,7 @@ func ExampleDSubmatrix() {
 }
 
 func ExampleDSize() {
-	M := MakeFloat64Matrix(3, 4)
+	M := MakeFloat64(3, 4)
 	rows, cols, stride := DSize(M)
 	fmt.Println("Original:  rows=", rows, "cols=", cols, "stride=", stride)
 
@@ -107,7 +107,7 @@ func ExampleDSize() {
 }
 
 func ExampleCSubmatrix() {
-	M := MakeComplex64Matrix(3, 4)
+	M := MakeComplex64(3, 4)
 	for i := range M {
 		for j := range M[i] {
 			M[i][j] = complex(float32(i), float32(j))
@@ -126,7 +126,7 @@ func ExampleCSubmatrix() {
 }
 
 func ExampleCSize() {
-	M := MakeComplex64Matrix(3, 4)
+	M := MakeComplex64(3, 4)
 	rows, cols, stride := CSize(M)
 	fmt.Println("Original:  rows=", rows, "cols=", cols, "stride=", stride)
 
@@ -142,7 +142,7 @@ func ExampleCSize() {
 }
 
 func ExampleZSubmatrix() {
-	M := MakeComplex128Matrix(3, 4)
+	M := MakeComplex128(3, 4)
 	for i := range M {
 		for j := range M[i] {
 			M[i][j] = complex(float64(i), float64(j))
@@ -161,7 +161,7 @@ func ExampleZSubmatrix() {
 }
 
 func ExampleZSize() {
-	M := MakeComplex128Matrix(3, 4)
+	M := MakeComplex128(3, 4)
 	rows, cols, stride := ZSize(M)
 	fmt.Println("Original:  rows=", rows, "cols=", cols, "stride=", stride)
 
