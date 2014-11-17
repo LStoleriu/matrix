@@ -1,4 +1,4 @@
-package fftw
+package matrix
 
 // functions for casting between real/complex arrays
 

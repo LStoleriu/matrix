@@ -1,4 +1,4 @@
-package fftw
+package matrix
 
 import "fmt"
 
