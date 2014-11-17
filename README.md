@@ -2,5 +2,5 @@
 
 Go utilities for matrices with contiguous underlying storage. 
 Contiguous matrices are usable with compute libraries like
-http://github.com/barnex/gls and
+http://github.com/barnex/gsl and
 http://github.com/barnex/fftw
